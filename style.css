@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Georgia", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fff7f9);
+    color: #4a2630;
+}
+
+/* Floating hearts */
+
+.hearts {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 15px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.card {
+    width: 90%;
+    max-width: 650px;
+    padding: 55px 35px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 182, 193, 0.5);
+    border-radius: 30px;
+
+    box-shadow: 0 20px 50px rgba(180, 70, 100, 0.15);
+
+    animation: appear 1.2s ease;
+}
+
+.small-text {
+    font-size: 16px;
+    color: #b76e79;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 55px;
+    color: #a9445b;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #7d3546;
+    margin-bottom: 25px;
+}
+
+.message {
+    max-width: 500px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #68404a;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #d95b73;
+    color: white;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(217, 91, 115, 0.3);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+#surprise {
+    display: none;
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #f2c4ce;
+
+    animation: surprise 1s ease;
+}
+
+.cake {
+    font-size: 70px;
+    margin-bottom: 15px;
+    animation: bounce 1.5s infinite;
+}
+
+#surprise p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.hearts-bottom {
+    font-size: 25px;
+    margin-top: 20px;
+    letter-spacing: 8px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes surprise {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 40px 22px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .hearts {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+}

@@ -425,3 +425,19 @@ body {
     height: 320px;
   }
 }
+.memory-photo {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  object-fit: cover;
+  margin: 25px auto 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(150, 60, 90, 0.18);
+}
+
+@media (max-width: 600px) {
+  .memory-photo {
+    height: 280px;
+  }
+}
